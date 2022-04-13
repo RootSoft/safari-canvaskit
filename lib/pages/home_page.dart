@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
+import 'package:safari_canvaskit/screens/details_screen.dart';
 import 'package:safari_canvaskit/widgets/ipfs/ipfs.dart';
 import 'package:safari_canvaskit/widgets/ipfs/ipfs_image.dart';
 import 'package:safari_canvaskit/widgets/landing_image.dart';
@@ -53,7 +54,14 @@ class HomePage extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                         scrollController: _scrollController,
-                        onMintTap: () async {},
+                        onMintTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const DetailsScreen(),
+                            ),
+                          );
+                        },
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 2,
