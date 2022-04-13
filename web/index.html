@@ -31,8 +31,19 @@
 
   <title>safari_canvaskit</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Flutter WebGL 2.0 fix (https://github.com/flutter/flutter/issues/89655) -->
+<!--  <script type="text/javascript">-->
+<!--    HTMLCanvasElement.prototype.getContext = function (orig) {-->
+<!--       return function(type) {-->
+<!--         return type !== "webgl2" ? orig.apply(this, arguments) : null-->
+<!--       }-->
+<!--    }(HTMLCanvasElement.prototype.getContext)-->
+<!--  </script>-->
 </head>
 <body>
+
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
