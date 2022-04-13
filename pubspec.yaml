@@ -14,14 +14,11 @@ dependencies:
   bloc: ^8.0.3
   flutter_bloc: ^8.0.1
 
-  # Hero Icons - uses latest master branch of hero icons
+  # Hero Icons - also tried the latest master branch of SVG picture
   heroicons: ^0.4.0
 
   # Cached Network Image
   cached_network_image: ^3.2.0
-
-  # Sliver tools
-  sliver_tools: ^0.2.5
 
 dev_dependencies:
   flutter_test:
