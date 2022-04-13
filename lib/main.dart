@@ -1,26 +1,15 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:safari_canvaskit/config/routes/routes_config.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
 
-  // Register service location
-  final router = configureRoutes('/');
-
-  runApp(SafariApp(
-    router: router,
-  ));
+  runApp(SafariApp());
 }
 
 class SafariApp extends StatelessWidget {
-  final GoRouter router;
-
   const SafariApp({
-    required this.router,
     Key? key,
   }) : super(key: key);
 
